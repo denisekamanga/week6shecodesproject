@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art</title>
+    <style>
+        body{
+
+            background: linear-gradient(68.6deg, rgb(252, 165, 241) 1.8%, rgb(181, 255, 255) 100.5%);
+        }
+
+        h1{
+
+            text-align: center;
+        }
+
+        h2{
+
+            text-align: center;
+        }
+
+        img{
+
+            max-width: 100%;
+            
+        }
+
+        a{
+
+            text-decoration: none;
+        }
+        .container{
+
+            max-width: 600px;
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button{
+
+            display: block;
+            margin: 0 auto;
+            border: 1px solid plum;
+            background: white;
+            font-size: 40px;
+            border-radius: 15px;
+            padding:5px 8px;
+            transition: all 150ms ease-in-out;
+        }
+
+        button:hover{
+
+            background: plum;
+            cursor: pointer;
+
+        }
+
+        footer{
+
+            text-align: center;
+            margin: 10px 0px;
+            font-size: 18px;
+        }
+
+        .theme-dark{
+
+            font-size: 20px;
+            background: black;
+            color: white;
+            padding: 5px 8px;
+        }
+
+        .theme-dark:hover{
+
+            color: black;
+            background: white;
+            transition: all 150ms ease-in-out;
+            
+        }
+
+        .firstpic{
+
+            border-radius: 10px;
+        }
+
+        p{
+
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .firstpic:hover{
+
+            filter:contrast(70%);
+            transform: scale(1.1) ;
+        }
+
+        .grid{
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns:  1fr 1fr;
+            grid-gap: 15px;
+        }
+
+        .grid img{
+            border-radius:8px;
+            width: 100%;
+            aspect-ratio: 1/1;
+            transition: all 150ms ease-in-out;
+        
+        }
+
+        .grid img:hover{
+
+            transform: scale(1.1);
+        }
+
+        .dark{
+            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+            color: white;
+        }
+
+        .dark .container{
+
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark a{
+
+            color: plum;
+
+        }
+
+    </style>
+</head>
+<body>
+   
+    <button class="theme-dark">Dark theme </button>
+    <div class="container" class="grid">
+    <h1>🎨Art</h1>
+    <h2>My favorite hobby </h2>
+    
+    <img src="https://i.pinimg.com/736x/ec/03/57/ec03576e56c0fc8c2bc4173046730d1b.jpg" alt="" class="firstpic">
+    <div class="grid">
+    <img src="https://i.pinimg.com/736x/29/35/44/293544ba56a4ee87cd2a47b3a26d984b.jpg"alt="">
+    <img src="https://i.pinimg.com/originals/72/70/e4/7270e44492dc25e6cea858c0a1ca4be2.jpg" alt="">
+    <img src="https://m.media-amazon.com/images/I/81QjgjqMaHL._SL1500_.jpg" alt="">
+    <img src="https://2.bp.blogspot.com/-EYqnQ0HaWkI/W9HaIVVUX7I/AAAAAAABqDk/Ku_wS-klb7EtxvrofXr15rvX-cin4eRlgCKgBGAs/s1600/02-Fruity-Angel-Ganev-Luminous-Pencil-Portraits-that-Glow-www-designstack-co.jpg" alt="">
+
+    </div>
+    <p>Art is a diverse range of human activity and its resulting product that involves creative or imaginative talent
+    generally expressive of technical proficiency, beauty, emotional power, or conceptual ideas.</p>
+    <a href="https://en.wikipedia.org/wiki/Art"><button>Learn art </button></a>
+    </div>
+    <footer>Coded by ❤️ <a href="https://www.instagram.com/nedinakamanga/"> nedinakamanga</a> with HTML, CSS and JavaScript</footer>
+   
+
+
+
+    <script>
+
+        function changeTheme()
+        {
+            let body = document.querySelector("body");
+
+            if (body.classList.contains("dark")){
+                body.classList.remove("dark");
+            }else{
+            body.classList.add("dark");
+            }
+        }
+        let themebutton = document.querySelector(".theme-dark");
+        themebutton.addEventListener("click", changeTheme);
+    </script>
+</body>
+</html>
